@@ -45,7 +45,12 @@ Clone each component then add into 4 separate folders in this proxy repo.
 
 Run 'npm install' all dependencies for each.
 
-Run 'npm run build' for production bundle.js file for each.
+Run a production bundle.js file for each.
+
+- About Component: npm run build-prod
+- Reservations Component: npm run build:prod   
+- Menu Component: npm run build:prod 
+- Reviews Component: npm run build
 
 Run 'npm start' in separate terminals to run server for each.
 
