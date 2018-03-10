@@ -18,36 +18,40 @@
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 </head>
-<body>
+<body class="silverspoon">
   <div>
     <span><img class='logo' src='https://avatars3.githubusercontent.com/u/36716959?s=400&u=fe1362af0411b2722df3cb2e4aadec5aba490bad&v=4'></img></span>
     <span class='title'>SilverSpoon</span>
   </div>
-  <div id="about"></div>
+  <div class="gridSummary">
+    <div id="about"></div>
+  </div>
   <div id="reservations"></div>
   <div id="menu"></div>
-  <div id="reviews"></div>
+  <div class="reviewsGrid">
+    <div id="reviews"></div>
+  </div>
 
-  <script type='text/javascript' src="about.bundle.js"></script>
-  <script type='text/javascript' src="reservation.bundle.js"></script>
-  <script type='text/javascript' src="menu.bundle.js"></script>
-  <script type='text/javascript' src="reviews.bundle.js"></script>
+  <script type='text/javascript' src="http://abouts.us-east-2.elasticbeanstalk.com/bundle-prod.js"></script>
+  <script type='text/javascript' src="http://silverspoon-reservations.us-west-2.elasticbeanstalk.com/bundle-prod.js"></script>
+  <script type='text/javascript' src="http://silverspoon-menu.us-east-2.elasticbeanstalk.com/bundle-prod.js"></script>
+  <script type='text/javascript' src="http://restaurantsreview-env.us-west-1.elasticbeanstalk.com/bundle-prod.js"></script>
 
   <script type='text/javascript'>
     ReactDOM.render(
-      React.createElement(SummaryView, {id: 305}, null),
+      React.createElement(SummaryView, {id: 90976}, null),
       document.getElementById("about")
     );
     ReactDOM.render(
-      React.createElement(Reservation, {id: 305}, null),
+      React.createElement(Reservation, {id: 90976}, null),
       document.getElementById("reservations")
     );
     ReactDOM.render(
-      React.createElement(MenuView, {id: 305}, null),
+      React.createElement(MenuView, {id: 90976}, null),
       document.getElementById("menu")
     );
     ReactDOM.render(
-      React.createElement(App, {id: 305}, null),
+      React.createElement(App, {id: 90976}, null),
       document.getElementById("reviews")
     );
   </script>
