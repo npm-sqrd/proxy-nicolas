@@ -65,7 +65,7 @@
   width: 1.8em;
   color: red;
   font-weight: 5000;
-  
+
 }
 .stars > span:hover:before,
 .stars > span:hover ~ span:before {
@@ -113,22 +113,22 @@ ul.bargraph li.reddeep {
   background: #ED1C24;
   width:200%;
 }
- 
+
 ul.bargraph li.redpink {
   background: #EF465B;
   width:150%;
 }
- 
+
 ul.bargraph li.pink {
   background: #E55A6B;
   width:100%;
 }
- 
+
 ul.bargraph li.orangered {
   background: #E28159;
   width:60%;
 }
- 
+
 ul.bargraph li.orange {
   background: #F99C1C;
   width:10%;
@@ -222,4 +222,3 @@ img {
   height: 75px;
   width: 200px;
 }
-
