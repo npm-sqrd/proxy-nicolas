@@ -48,5 +48,4 @@ app.get('/restaurants/:id', (req, res) => {
     res.json(response.data);
   });
 });
-
 app.listen(port, () => console.log(`Proxy Server Up on port: ${port}`));
