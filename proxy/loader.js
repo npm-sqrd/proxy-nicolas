@@ -1,6 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const Promise = require('bluebird');
+const path = require('path');
 
 const exists = Promise.promisify(fs.stat);
 
@@ -37,9 +38,28 @@ const fetchBundles = (path, services, suffix = '', require = false) => {
   });
 };
 
+const fetchCSS = () => {
+  const filename = path.join(__dirname, './public/fetchedstyle.css');
+  exists(filename)
+    .then(() => {
+
+    })
+    .catch((err) => {
+      if (err.code === 'ENOENT') {
+        const url = 'http://localhost:3001/style.css';
+        console.log(`Fetching ${url}`);
+        fetch(url)
+          .then((res) => {
+            const dest = fs.createWriteStream(filename);
+            res.body.pipe(dest);
+          });
+      }
+    });
+};
+
 module.exports = (clientPath, serverPath, services) => {
   fetchBundles(clientPath, services, 'bundle-prod');
   fetchBundles(serverPath, services, 'bundle-prod-server', true);
-
+  fetchCSS();
   return services;
 };
