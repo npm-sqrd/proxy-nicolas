@@ -1,0 +1,21 @@
+config:
+  target: 'http://localhost:8000'
+  phases:
+    - duration: 60
+      arrivalCount: 20000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+  payload:
+    path: "./ids.csv"
+    fields:
+      - "id"
+scenarios:
+  - flow:
+    - loop:
+      - get:
+          url: "/restaurants/{{ id }}"
+      count: 15
+
+# the loop construct to loop through a number of requests in a
+# scenario. Each virtual user will send 2000 GET requests to /restaurants/id with this scenario
