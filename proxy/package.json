@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "nodemon -i ./public/services -i ./templates/services ./server.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,22 @@
   },
   "homepage": "https://github.com/thesilverspoon/proxy-mn#readme",
   "dependencies": {
-    "express": "^4.16.2",
-    "nodemon": "^1.17.1"
+    "artillery": "^1.6.0-14",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "express": "^4.16.3",
+    "newrelic": "^3.2.0",
+    "node-fetch": "^2.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "redis": "^2.8.0"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "webpack": "^3.10.0"
   }
 }
