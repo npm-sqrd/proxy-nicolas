@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -i ./public/services -i ./templates/services ./server.js"
+    "start": "node -i ./public/services -i ./templates/services ./server.js"
   },
   "repository": {
     "type": "git",

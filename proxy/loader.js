@@ -46,7 +46,7 @@ const fetchCSS = () => {
     })
     .catch((err) => {
       if (err.code === 'ENOENT') {
-        const url = 'http://localhost:3001/style.css';
+        const url = 'http://ec2-54-183-129-156.us-west-1.compute.amazonaws.com/style.css';
         console.log(`Fetching ${url}`);
         fetch(url)
           .then((res) => {
