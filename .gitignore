@@ -11,3 +11,9 @@ about.bundle.js
 menu.bundle.js
 reservation.bundle.js
 reviews.bundle.js
+
+Reviewsbundle-prod.js
+Reviewsbundle-prod-server.js
+fetchedstyle.css
+newrelic.js
+newrelic_agent.log

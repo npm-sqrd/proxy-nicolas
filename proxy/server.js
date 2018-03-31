@@ -45,7 +45,7 @@ http.createServer((req, res) => {
       } else {
         axios({
           method: 'get',
-          url: `http://localhost:3001/restaurants/${id}`,
+          url: `http://ec2-54-183-129-156.us-west-1.compute.amazonaws.com/restaurants/${id}`,
         }).then((response) => {
           res.writeHead(200, { 'Content-Type': 'application/json' });
           const jsonString = JSON.stringify(response.data);
